@@ -3910,7 +3910,7 @@ This function requires `epa' or `alpaca' library."
 	 nil))
       (when decrypted-result
 	(setq decrypted-result
-	      (epa--decode-coding-string
+	      (decode-coding-string
 	       decrypted-result
 	       (or coding-system-for-read 'undecided))))
       (if (epg-context-result-for context 'verify)
